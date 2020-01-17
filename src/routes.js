@@ -1,13 +1,13 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 // import { createStackNavigator } from 'react-navigation-stack';
 
-import SiginIn from '~/pages/SignIn';
-import SiginUp from '~/pages/SignUp';
+import SignIn from '~/pages/SignIn';
+import SignUp from '~/pages/SignUp';
 
 const routes = createAppContainer(
     createSwitchNavigator({
-        SiginIn,
-        SiginUp,
+        SignIn,
+        SignUp,
     })
 );
 
