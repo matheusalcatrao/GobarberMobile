@@ -17,7 +17,7 @@ export function* signIn({ payload }) {
 
         const { token, user } = response.data;
 
-        if (!user.provider) {
+        if (user.provider) {
             Alert.alert(
                 'Erro no login',
                 'Usuário não pode ser prestador de serviço'
@@ -27,6 +27,7 @@ export function* signIn({ payload }) {
 
         api.defaults.headers.Authorization = `Bearer ${token}`;
 
+        Alert.alert('Parabens', 'Login efetuado com sucesso');
         yield put(signInSuccess(token, user));
 
         // history.push('/dashboard');
